@@ -1,9 +1,22 @@
-export default function FriendListItem({ avatar, name, isOnline = false }) {
+import PropTypes from 'prop-types';
+import defaultAvatar from './default-avatar.jpg';
+
+export default function FriendListItem({
+  avatar = defaultAvatar,
+  name = 'Не известно',
+  isOnline,
+}) {
   return (
-    <li class="item">
-      <span class="status"></span>
-      <img class="avatar" src={avatar} alt={name} width="48" />
-      <p class={name}></p>
+    <li className="item">
+      <span className="status">{isOnline ? 'Онлайн' : 'Офлайн'}</span>
+      <img className="avatar" src={avatar} alt={name} width="48" />
+      <p className="name">{name}</p>
     </li>
   );
 }
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+};
