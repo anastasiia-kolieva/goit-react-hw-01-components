@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import defaultAvatar from './default-avatar.jpg';
 
-export default function FriendListItem({
+function FriendListItem({
   avatar = defaultAvatar,
   name = 'Не известно',
   isOnline,
@@ -20,3 +20,5 @@ FriendListItem.propTypes = {
   name: PropTypes.string,
   isOnline: PropTypes.bool,
 };
+
+export default FriendListItem;
