@@ -1,5 +1,15 @@
 import PropTypes from 'prop-types';
+import StatisticsList from './StatisticsList';
 
-export default function Statistics({ title, statisticalData }) {
-  return <div>{title && <h2>{title}</h2>}</div>;
+export default function Statistics({ title, stats }) {
+  return (
+    <section className="statistics">
+      {title && <h2>{title}</h2>}
+      <StatisticsList stats={stats} />
+    </section>
+  );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+};
