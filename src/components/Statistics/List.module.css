@@ -1,0 +1,28 @@
+.item {
+  width: 68px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 14px 0;
+}
+
+.item:nth-child(even) {
+  background-color: #4cc6f9;
+}
+
+.item:nth-child(odd) {
+  background-color: #e54c68;
+}
+
+.label,
+.percentage {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.label {
+  margin-bottom: 10px;
+}
