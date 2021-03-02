@@ -95,7 +95,7 @@ stats - массив объектов содержащих информацию 
 Пример использования:
 import statisticalData from '/путь/к/statistical-data.json';
 
-<Statistics title="Upload stats" stats={statisticalData} />;
+<Statistics title="Upload stats" stats={statisticalData} />
 <Statistics stats={statisticalData} />
 
           ЗАДАНИЕ 3 - Список друзей
